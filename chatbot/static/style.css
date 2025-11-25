@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.messages {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background: #fafafa;
+}
+
+.msg {
+    margin: 10px 0;
+    padding: 10px;
+    max-width: 70%;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.user {
+    background: #cce5ff;
+    align-self: flex-end;
+    float: right;
+    clear: both;
+}
+
+.bot {
+    background: #e2e2e2;
+    float: left;
+    clear: both;
+}
+
+.input-area {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 15px;
+    background: #4287f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background: #2f6fe4;
+}
+/* .summary-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background: #673ab7;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.summary-btn:hover {
+    background: #5e35b1;
+} */
+
+.msg-wrapper {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.msg-wrapper.user {
+    align-items: flex-end;
+}
+
+.msg-wrapper.bot {
+    align-items: flex-start;
+}
+
+.sentiment-tag {
+    font-size: 12px;
+    padding: 3px 8px;
+    width: fit-content;
+    border-radius: 20px;
+    margin-bottom: 3px;
+    color: white;
+    font-weight: bold;
+    animation: fadeIn 0.25s ease-in;
+}
+
+.sentiment-tag.positive {
+background-color: #2ecc71; 
+}
+
+.sentiment-tag.negative {
+    background-color: #e74c3c; 
+}
+
+.sentiment-tag.neutral {
+    background-color: #f1c40f;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
